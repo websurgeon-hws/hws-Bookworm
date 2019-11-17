@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
@@ -62,7 +63,30 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let moc: NSManagedObjectContext = {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+       
+        let book1 = Book(context: context)
+        book1.title = "Test book 1"
+        book1.author = "Test author 1"
+        book1.genre = "Fantasy"
+        book1.rating = 4
+        book1.review = "This was a great book; I really enjoyed it."
+
+        let book2 = Book(context: context)
+        book2.title = "Test book 2"
+        book2.author = "Test author 2"
+        book2.genre = "Horror"
+        book2.rating = 2
+        book2.review = "This was an ok book; I slightly enjoyed it."
+        
+        return context
+    }()
+
     static var previews: some View {
-        ContentView()
+        
+        
+        return ContentView()
+            .environment(\.managedObjectContext, moc)
     }
 }
