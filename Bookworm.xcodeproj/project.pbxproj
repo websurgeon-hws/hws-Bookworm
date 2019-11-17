@@ -17,6 +17,7 @@
 		D0EB4836237FF483000742C0 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB4835237FF483000742C0 /* AddBookView.swift */; };
 		D0EB4838237FF828000742C0 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB4837237FF828000742C0 /* RatingView.swift */; };
 		D0EB483A237FF96C000742C0 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB4839237FF96C000742C0 /* EmojiRatingView.swift */; };
+		D0EB483E23816333000742C0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB483D23816333000742C0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D0EB4835237FF483000742C0 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		D0EB4837237FF828000742C0 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D0EB4839237FF96C000742C0 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		D0EB483D23816333000742C0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				D0922346237E93F1009827B1 /* SceneDelegate.swift */,
 				D092234B237E93F1009827B1 /* ContentView.swift */,
 				D0EB4835237FF483000742C0 /* AddBookView.swift */,
+				D0EB483D23816333000742C0 /* DetailView.swift */,
 				D0EB4837237FF828000742C0 /* RatingView.swift */,
 				D0EB4839237FF96C000742C0 /* EmojiRatingView.swift */,
 				D092234D237E93F3009827B1 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0922345237E93F1009827B1 /* AppDelegate.swift in Sources */,
+				D0EB483E23816333000742C0 /* DetailView.swift in Sources */,
 				D092234A237E93F1009827B1 /* Bookworm.xcdatamodeld in Sources */,
 				D0EB483A237FF96C000742C0 /* EmojiRatingView.swift in Sources */,
 				D092234C237E93F1009827B1 /* ContentView.swift in Sources */,

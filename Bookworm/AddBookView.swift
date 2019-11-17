@@ -7,7 +7,9 @@ import SwiftUI
 struct AddBookView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Book.entity(), sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(entity: Book.entity(), sortDescriptors: [])
+    
+    var books: FetchedResults<Book>
 
     @State private var showingAddScreen = false
     @State private var title = ""
