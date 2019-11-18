@@ -51,11 +51,15 @@ struct AddBookView: View {
                         try? self.moc.save()
                         self.presentationMode.wrappedValue.dismiss()
                     }
+                    .disabled(!self.isValidReview)
                 }
-                
             }
             .navigationBarTitle("Add Book")
         }
+    }
+    
+    var isValidReview: Bool {
+        return !self.genre.isEmpty
     }
 }
 
