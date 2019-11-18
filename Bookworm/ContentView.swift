@@ -28,6 +28,7 @@ struct ContentView: View {
                         VStack(alignment: .leading) {
                             Text(book.title ?? "Unknown Title")
                                 .font(.headline)
+                                .foregroundColor(book.rating == 1 ? Color.red : Color.primary)
                             Text(book.author ?? "Unknown Author")
                                 .foregroundColor(.secondary)
                         }
@@ -77,7 +78,7 @@ struct ContentView_Previews: PreviewProvider {
         book2.title = "Test book 2"
         book2.author = "Test author 2"
         book2.genre = "Horror"
-        book2.rating = 2
+        book2.rating = 1
         book2.review = "This was an ok book; I slightly enjoyed it."
         
         return context
