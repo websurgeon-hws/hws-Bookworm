@@ -5,6 +5,19 @@
 import SwiftUI
 import CoreData
 
+extension Book {
+    var displayDate: String {
+        guard let date = self.date else {
+            return ""
+        }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        
+        return formatter.string(from: date)
+    }
+}
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Book.entity(),
@@ -73,6 +86,7 @@ struct ContentView_Previews: PreviewProvider {
         book1.genre = "Fantasy"
         book1.rating = 4
         book1.review = "This was a great book; I really enjoyed it."
+        book1.date = Date()
 
         let book2 = Book(context: context)
         book2.title = "Test book 2"
@@ -80,7 +94,8 @@ struct ContentView_Previews: PreviewProvider {
         book2.genre = "Horror"
         book2.rating = 1
         book2.review = "This was an ok book; I slightly enjoyed it."
-        
+        book2.date = Date().advanced(by: -1 * 3 * 24 * 60 * 60)
+
         return context
     }()
 

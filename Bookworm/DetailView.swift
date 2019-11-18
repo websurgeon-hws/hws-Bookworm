@@ -39,6 +39,10 @@ struct DetailView: View {
                 RatingView(rating: .constant(Int(self.book.rating)))
                     .font(.largeTitle)
 
+                Text(self.book.displayDate)
+                    .font(.caption)
+                    .foregroundColor(Color.gray)
+
                 Spacer()
             }
         }
@@ -77,7 +81,8 @@ struct DetailView_Previews: PreviewProvider {
         book.genre = "Fantasy"
         book.rating = 4
         book.review = "This was a great book; I really enjoyed it."
-
+        book.date = Date()
+        
         return NavigationView {
             DetailView(book: book)
         }
